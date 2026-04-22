@@ -124,7 +124,7 @@
             letter-spacing: 2px;
             color: var(--orange);
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             display: block;
         }
 
@@ -145,8 +145,8 @@
             width: 80px;
             height: 4px;
             background: var(--orange);
-            margin-top: 0.8rem;
-            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         /* HERO SECTION */
@@ -172,12 +172,12 @@
         /* COLLAPSIBLE SECTION */
         .collapsible-section {
             background-color: var(--background);
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
         }
 
         .collapsible-header {
             max-width: 1400px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1.5rem;
         }
 
         .collapsible-container {
@@ -363,7 +363,7 @@
         /* MOTIVATION SECTION */
         .motivation-section {
             background-color: var(--background);
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
         }
 
         .motivation-box {
@@ -496,22 +496,26 @@
 
             .timeline {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 30px;
+                margin-top: 1.5rem;
             }
 
             .timeline-item {
                 flex: 0 0 100%;
                 width: 100%;
+                position: relative;
+                margin-bottom: 15px;
             }
 
             .timeline-item::after {
                 content: '↓';
                 position: absolute;
                 right: auto;
-                bottom: -28px;
+                bottom: -35px;
                 left: 50%;
                 transform: translateX(-50%);
                 font-size: 1.5rem;
+                color: var(--orange);
             }
 
             .timeline-item:last-child::after {
@@ -529,6 +533,10 @@
             .collapsible-btn {
                 padding: 1.2rem;
                 font-size: 1rem;
+            }
+
+            .collapsible-section {
+                padding: 2rem 2rem;
             }
         }
 
@@ -551,6 +559,11 @@
 
             .timeline-item {
                 padding: 1rem 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            .timeline-item::after {
+                bottom: -35px;
             }
 
             .timeline-dot {
@@ -681,7 +694,7 @@
         <div class="collapsible-container">
             <div class="collapsible-item active">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                    <span>💬 Expected Interview Questions</span>
+                    <span>���� Expected Interview Questions</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
