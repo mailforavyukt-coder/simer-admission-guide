@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMER PGDM Admission Guide 2026</title>
+    <style>
+        :root {
+            --background: hsl(40, 33%, 97%);
+            --foreground: hsl(240, 33%, 14%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(240, 33%, 14%);
+            --primary: hsl(14, 79%, 53%);
+            --primary-foreground: hsl(40, 33%, 97%);
+            --secondary: hsl(40, 33%, 97%);
+            --secondary-foreground: hsl(240, 33%, 14%);
+            --muted: hsl(40, 20%, 93%);
+            --muted-foreground: hsl(240, 10%, 45%);
+            --accent: hsl(150, 53%, 35%);
+            --accent-foreground: hsl(40, 33%, 97%);
+            --border: hsl(240, 10%, 85%);
+            --input: hsl(240, 10%, 85%);
+            --ring: hsl(14, 79%, 53%);
+            --ink: hsl(240, 33%, 14%);
+            --ink-400: hsl(240, 10%, 55%);
+            --ink-600: hsl(240, 15%, 35%);
+            --cream: hsl(40, 33%, 97%);
+            --cream-dark: hsl(40, 20%, 93%);
+            --orange: hsl(14, 79%, 53%);
+            --leaf: hsl(150, 53%, 35%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            background-color: var(--card);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: auto;
+        }
+
+        .simer-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -0.3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--orange);
+        }
+
+        .apply-btn {
+            background: var(--orange);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            background: hsl(14, 79%, 45%);
+            transform: translateY(-2px);
+        }
+
+        /* SECTION HEADER */
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--orange);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -0.8px;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .section-title-red {
+            color: var(--orange);
+        }
+
+        .underline {
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: var(--background);
+            padding: 5rem 2rem;
+            text-align: left;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--ink-400);
+            max-width: 700px;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* CARDS GRID */
+        .cards-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--orange);
+        }
+
+        .feature-card:nth-child(even)::before {
+            background: var(--leaf);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(20, 126, 83, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .card-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.2px;
+        }
+
+        .card-subtitle {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .card-content {
+            color: var(--ink-400);
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        /* TIMELINE SECTION */
+        .timeline-section {
+            background-color: var(--background);
+            padding: 5rem 2rem;
+        }
+
+        .timeline {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline-item {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--orange);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .timeline-item:hover {
+            box-shadow: 0 8px 20px rgba(20, 126, 83, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .timeline-dot {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: var(--ink-400);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* INTERVIEW SECTION */
+        .interview-section {
+            background-color: var(--background);
+            padding: 5rem 2rem;
+        }
+
+        .interview-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .interview-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .interview-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .question-box {
+            background: hsl(14, 79%, 95%);
+            padding: 1.2rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--orange);
+            transition: all 0.3s ease;
+        }
+
+        .question-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(20, 126, 83, 0.1);
+        }
+
+        .question-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .question-text {
+            color: var(--ink);
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* MOTIVATION SECTION */
+        .motivation-section {
+            background-color: var(--background);
+            padding: 5rem 2rem;
+        }
+
+        .motivation-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--orange);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .motivation-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.2px;
+        }
+
+        .motivation-content {
+            color: var(--ink-400);
+            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .motivation-highlight {
+            background: hsl(14, 79%, 95%);
+            border-left: 4px solid var(--orange);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--orange);
+            font-size: 1rem;
+        }
+
+        /* FAQ SECTION */
+        .faq-section {
+            background-color: var(--background);
+            padding: 5rem 2rem;
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: var(--card);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .faq-question {
+            padding: 1.3rem;
+            background: linear-gradient(135deg, hsl(14, 79%, 53%) 0%, hsl(150, 53%, 35%) 100%);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, hsl(14, 79%, 48%) 0%, hsl(150, 53%, 30%) 100%);
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.3rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.3rem;
+        }
+
+        .faq-answer p {
+            color: var(--ink-400);
+            line-height: 1.7;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            background: linear-gradient(135deg, hsl(14, 79%, 53%) 0%, hsl(150, 53%, 35%) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .contact-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.15rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+            }
+
+            nav {
+                padding: 0;
+            }
+
+            .logo-img {
+                width: 35px;
+            }
+
+            .simer-text {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cards-grid {
+                padding: 0 1rem;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-section">
+                <svg class="logo-img" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="30" r="25" fill="hsl(14, 79%, 53%)"/>
+                    <circle cx="90" cy="30" r="25" fill="hsl(150, 53%, 35%)"/>
+                    <circle cx="70" cy="70" r="25" fill="hsl(150, 53%, 45%)"/>
+                </svg>
+                <div class="simer-text">SIMER</div>
+            </div>
+            <ul>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#interview">Interview</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="apply-btn">Apply Now →</button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="section-label">START YOUR JOURNEY</span>
+            <h1 class="section-title">Admission at <span class="section-title-red">SIMER</span></h1>
+            <div class="underline"></div>
+            <p>Your path to excellence in management education begins here. Join our community of future leaders and shape your career with us.</p>
+        </div>
+    </section>
+
+    <!-- FEATURE CARDS SECTION -->
+    <section class="cards-grid">
+        <div class="feature-card">
+            <span class="card-number">01</span>
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Quick Process</h3>
+            <p class="card-subtitle">1-1.5 Hours Only</p>
+            <p class="card-content">Complete your entire admission in just one sitting. Simple, efficient, and hassle-free for every applicant.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="card-number">02</span>
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Merit Based</h3>
+            <p class="card-subtitle">Fair Evaluation</p>
+            <p class="card-content">We assess your potential holistically through test and interview performance based on merit.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="card-number">03</span>
+            <div class="card-icon">📊</div>
+            <h3 class="card-title">Transparent</h3>
+            <p class="card-subtitle">Real-time Results</p>
+            <p class="card-content">Get your results same day or within 24 hours via call or SMS notification system.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="card-number">04</span>
+            <div class="card-icon">🤝</div>
+            <h3 class="card-title">Support</h3>
+            <p class="card-subtitle">Always Here</p>
+            <p class="card-content">Our admissions team is ready to guide you at every step of the entire admission journey.</p>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="process" class="timeline-section">
+        <div class="hero-content">
+            <span class="section-label">ADMISSION STEPS</span>
+            <h1 class="section-title">Your Journey for Admission <span class="section-title-red">Process</span></h1>
+            <div class="underline"></div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot">📝</div>
+                <div class="timeline-title">Fill Form</div>
+                <div class="timeline-description">Complete admission form</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">💳</div>
+                <div class="timeline-title">Pay Fee</div>
+                <div class="timeline-description">₹900 registration</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">📄</div>
+                <div class="timeline-title">Documents</div>
+                <div class="timeline-description">Submit certificates</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">📅</div>
+                <div class="timeline-title">Get Date</div>
+                <div class="timeline-description">Test scheduled</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">✍️</div>
+                <div class="timeline-title">Written Test</div>
+                <div class="timeline-description">20 min test</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">👥</div>
+                <div class="timeline-title">Interview</div>
+                <div class="timeline-description">Personal talk</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">📢</div>
+                <div class="timeline-title">Result</div>
+                <div class="timeline-description">Same day</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot">✅</div>
+                <div class="timeline-title">Confirm</div>
+                <div class="timeline-description">₹10,000 fee</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERVIEW SECTION -->
+    <section id="interview" class="interview-section">
+        <div class="hero-content">
+            <span class="section-label">WHAT WE ASK</span>
+            <h1 class="section-title">Prepare for Your <span class="section-title-red">Interview</span></h1>
+            <div class="underline"></div>
+        </div>
+
+        <div class="interview-grid">
+            <div class="interview-card">
+                <h3>💬 Expected Questions</h3>
+                <div class="questions-grid">
+                    <div class="question-box">
+                        <div class="question-icon">🤔</div>
+                        <div class="question-text">Tell us about yourself & your background</div>
+                    </div>
+                    <div class="question-box">
+                        <div class="question-icon">📚</div>
+                        <div class="question-text">What's your academic journey so far?</div>
+                    </div>
+                    <div class="question-box">
+                        <div class="question-icon">🌍</div>
+                        <div class="question-text">Current affairs & what's happening around?</div>
+                    </div>
+                    <div class="question-box">
+                        <div class="question-icon">🎯</div>
+                        <div class="question-text">Why PGDM & Why choose SIMER?</div>
+                    </div>
+                    <div class="question-box">
+                        <div class="question-icon">🚀</div>
+                        <div class="question-text">Where do you see yourself in 5 years?</div>
+                    </div>
+                    <div class="question-box">
+                        <div class="question-icon">💡</div>
+                        <div class="question-text">What excites you most about your career?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOTIVATION SECTION -->
+    <section class="motivation-section">
+        <div class="hero-content">
+            <span class="section-label">BELIEVE IN YOURSELF</span>
+            <h1 class="section-title">Start Your Success <span class="section-title-red">Story</span></h1>
+            <div class="underline"></div>
+        </div>
+
+        <div class="motivation-box">
+            <h3 class="motivation-title">🌟 You've Got What It Takes!</h3>
+            
+            <div class="motivation-content">
+                <p>The panel wants to see the real you – passionate, eager, and ready to grow. Your mistakes don't define you; your determination does.</p>
+
+                <div class="motivation-highlight">
+                    ✨ Nervousness is a sign you care. Channel that energy into your answers and shine bright!
+                </div>
+
+                <p>Be authentic, be confident, be yourself. That's your winning formula. 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <div class="hero-content">
+            <span class="section-label">COMMON QUESTIONS</span>
+            <h1 class="section-title">We Answer Your <span class="section-title-red">Concerns</span></h1>
+            <div class="underline"></div>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How long is the entire admission process?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Complete admission takes 1-1.5 hours: 20 minutes written test, 10-15 minutes interview, and quick admin work. Same day or next day results!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What documents should I carry on admission day?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Bring: 10th & 12th certificates, graduation certificate, entrance exam score card, completed admission form, and valid ID proof.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>When will I know the result?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You'll get results same day evening or next day via call/SMS. No long waiting – we value your time.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if I don't do well in the written test?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Test is just one part! Your interview, personality, and overall impression matter equally. A strong interview can completely change the outcome.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if I get rejected?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We evaluate your placement potential and readiness for PGDM. If you're not selected now, we may give you another chance with more preparation. We believe in you!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How can I get selected?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Be yourself, answer thoughtfully, show genuine interest in your career, and demonstrate commitment to learning. Confidence and honesty go a long way!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>My academic grades are not great – does it matter?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Grades are just numbers. We care about your attitude, eagerness to learn, and determination to succeed. Show us your hunger for excellence!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What should I wear?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Dress formally: men wear shirt, trousers, and tie; women wear saree or professional dress. Be well-groomed – first impressions matter!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I postpone my admission?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Contact us at 9826107555 to discuss deferment. We'll do our best to accommodate your needs based on availability.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Need more help?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Call us at 9826107555 or visit www.simer.in. Our admissions team is always ready to guide and support you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2 class="contact-title">Ready to Join <span class="section-title-red">Us?</span></h2>
+            <p class="contact-info">Take the first step towards your future at SIMER!</p>
+            <div class="contact-number">📱 9826107555</div>
+            <div class="contact-details">
+                <p><strong>www.simer.in</strong></p>
+                <p style="margin-top: 0.8rem;">Shivalik Institute of Management Education and Research<br>Durg, Chhattisgarh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 SIMER PGDM | Empowering Tomorrow's Leaders 🎓</p>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
