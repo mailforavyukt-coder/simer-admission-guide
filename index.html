@@ -169,6 +169,59 @@
             font-weight: 500;
         }
 
+        /* WELCOME SECTION */
+        .welcome-section {
+            background: linear-gradient(135deg, hsl(240, 33%, 35%) 0%, hsl(240, 33%, 25%) 100%);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .welcome-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .welcome-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .welcome-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .welcome-button {
+            display: inline-block;
+            background: var(--orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--orange);
+        }
+
+        .welcome-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(222, 113, 53, 0.3);
+        }
+
+        .welcome-image {
+            text-align: center;
+            font-size: 4rem;
+        }
+
         /* COLLAPSIBLE SECTION */
         .collapsible-section {
             background-color: var(--background);
@@ -410,50 +463,65 @@
             font-size: 0.95rem;
         }
 
-        /* CONTACT SECTION */
-        .contact-section {
-            background: linear-gradient(135deg, hsl(240, 33%, 35%) 0%, hsl(240, 33%, 25%) 100%);
+        /* CLOSING SECTION */
+        .closing-section {
+            background: linear-gradient(135deg, hsl(14, 79%, 53%) 0%, hsl(14, 85%, 45%) 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
         }
 
-        .contact-content {
-            max-width: 700px;
+        .closing-content {
+            max-width: 800px;
             margin: 0 auto;
             opacity: 0;
         }
 
-        .contact-content.reveal {
+        .closing-content.reveal {
             animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        .contact-title {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
+        .closing-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
             font-weight: 800;
+            line-height: 1.3;
         }
 
-        .contact-info {
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
+        .closing-message {
+            font-size: 1.1rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
             opacity: 0.95;
         }
 
-        .contact-number {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            display: inline-block;
+        .closing-highlight {
+            font-size: 1.2rem;
             font-weight: 700;
-            font-size: 1.1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 1.2rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            border-left: 4px solid white;
+            font-style: italic;
         }
 
-        .contact-details {
+        .college-details {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
             font-size: 0.95rem;
             opacity: 0.9;
+        }
+
+        .college-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+
+        .college-info {
+            line-height: 1.8;
         }
 
         /* FOOTER */
@@ -479,6 +547,11 @@
             .timeline-item::after {
                 right: -18px;
                 font-size: 1.2rem;
+            }
+
+            .welcome-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
 
@@ -528,7 +601,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .contact-title {
+            .closing-title {
                 font-size: 1.5rem;
             }
 
@@ -539,6 +612,10 @@
 
             .collapsible-section {
                 padding: 1.5rem 2rem;
+            }
+
+            .welcome-content h2 {
+                font-size: 1.6rem;
             }
         }
 
@@ -596,6 +673,26 @@
                 padding: 1rem;
                 font-size: 0.95rem;
             }
+
+            .welcome-section {
+                padding: 2rem 1rem;
+            }
+
+            .welcome-container {
+                gap: 1.5rem;
+            }
+
+            .welcome-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .closing-title {
+                font-size: 1.2rem;
+            }
+
+            .college-name {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -615,6 +712,20 @@
             </ul>
         </nav>
     </header>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome-section" id="admission">
+        <div class="welcome-container">
+            <div class="welcome-content reveal">
+                <h2>Ready to Join <span style="color: hsl(40, 33%, 97%);">Us?</span></h2>
+                <p>Take the first step towards your future at SIMER. Join our community of future leaders and shape your career with excellence and confidence.</p>
+                <a href="#faq" class="welcome-button">Start Your Journey →</a>
+            </div>
+            <div class="welcome-image">
+                🎓
+            </div>
+        </div>
+    </section>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -650,7 +761,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot">📄</div>
                 <div class="timeline-title">Documents</div>
-                <div class="timeline-description">Submit 10th, 12th and Graduation Cert, Entrance Exm Score Card </div>
+                <div class="timeline-description">Submit certs</div>
             </div>
 
             <div class="timeline-item">
@@ -661,8 +772,8 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot">✍️</div>
-                <div class="timeline-title">Written Communication Test (20 Min)</div>
-                <div class="timeline-description">Subjective Question</div>
+                <div class="timeline-title">Written Communication Test</div>
+                <div class="timeline-description">20 min</div>
             </div>
 
             <div class="timeline-item">
@@ -737,8 +848,7 @@
                 <div class="collapsible-content">
                     <p><strong>Research SIMER:</strong> Know about our programs, values, and achievements. Show genuine interest in why we are right for you.</p>
                     <p><strong>Prepare Your Story:</strong> Have a clear narrative about your background, goals, and why you chose management education.</p>
-                    <p><strong>Current Affairs:</strong> Stay updated with recent news in business, technology, and current events. Be ready to discuss them briefly.</p>
-                    <p><strong>Mock Interviews:</strong> Practice with friends or mentors. Get comfortable speaking confidently about your experiences.</p>
+                    <p><strong>Current Affairs:</strong> Stay updated with recent news in business, technology, and current events.</p>                    
                 </div>
             </div>
 
@@ -752,7 +862,6 @@
                     <p><strong>Listen Carefully:</strong> Take time to understand the question before answering. It is okay to pause and think.</p>
                     <p><strong>Maintain Eye Contact:</strong> Show confidence and engagement by looking at the interviewer while speaking.</p>
                     <p><strong>Use Examples:</strong> Back your statements with real examples from your experience or academic projects.</p>
-                    <p><strong>Ask Questions:</strong> At the end, ask thoughtful questions about the program or campus life. It shows your interest.</p>
                 </div>
             </div>
         </div>
@@ -836,17 +945,17 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>We evaluate your placement potential and readiness for PGDM. If you are not selected now, we may give you another chance with more preparation. We believe in you!</p>
+                    <p>We evaluate your placement potential and readiness for PGDM based on how well your aspirations align with what we offer at SIMER. If there's a mismatch, it doesn't mean you're not capable – it simply means a different institution or field might be a better fit for your unique goals and dreams. Don't lose heart! The right opportunity is waiting for you somewhere. Use this as a stepping stone to explore paths that truly resonate with your passion and potential. Your journey doesn't end here; it merely takes a different, perhaps even better, direction.</p>
                 </div>
             </div>
 
             <div class="collapsible-item">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                    <span>How can I get selected?</span>
+                    <span>What if I have weak English?</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Be yourself, answer thoughtfully, show genuine interest in your career, and demonstrate commitment to learning. Confidence and honesty go a long way!</p>
+                    <p>Don't worry! We focus on how you answer and communicate your thoughts, not just perfect English. You can speak a mix of Hindi and English – whatever helps you express yourself better. We value clarity, confidence, and your ideas over grammatical perfection. English is the language of business, and that's exactly what we'll train you in during these two years. You'll strengthen your language skills alongside your management knowledge. Many of our successful alumni started with similar concerns and are now confident professionals!</p>
                 </div>
             </div>
 
@@ -856,7 +965,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Grades are just numbers. We care about your attitude, eagerness to learn, and determination to succeed. Show us your hunger for excellence!</p>
+                    <p>Grades are just numbers. We care about your attitude, eagerness to learn, and determination to succeed. Show us your hunger for excellence! Beyond academics, we value the real-world skills you bring – your communication ability, problem-solving mindset, leadership qualities, and willingness to grow. At SIMER, we focus on building skills and shaping well-rounded professionals. Your past doesn't define your future; your commitment does!</p>
                 </div>
             </div>
 
@@ -872,11 +981,11 @@
 
             <div class="collapsible-item">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                    <span>Can I postpone my admission?</span>
+                    <span>How can I get selected?</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Contact Mr Vinay Bhardwaj (Admin Officer) at 9826107555 to discuss deferment. We will do our best to accommodate your needs based on availability.</p>
+                    <p>Be yourself, answer thoughtfully, show genuine interest in your career, and demonstrate commitment to learning. Confidence and honesty go a long way!</p>
                 </div>
             </div>
 
@@ -886,28 +995,41 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Call Mr Vinay Bhardwaj (Admin Officer) at 9826107555 or visit www.simer.in. Our admissions team is always ready to guide and support you!</p>
+                    <p>Call us at 9826107555 or visit www.simer.in. Our admissions team is always ready to guide and support you!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section">
-        <div class="contact-content">
-            <h2 class="contact-title">Ready to Join <span class="section-title-red">Us?</span></h2>
-            <p class="contact-info">Take the first step towards your future at SIMER!</p>
-            <div class="contact-number">9826107555</div>
-            <div class="contact-details">
-                <p><strong>www.simer.in</strong></p>
-                <p style="margin-top: 0.8rem;">Shivalik Institute of Management Education and Research<br>Durg, Chhattisgarh</p>
+    <!-- CLOSING SECTION -->
+    <section class="closing-section">
+        <div class="closing-content">
+            <h2 class="closing-title">Best Wishes for Your Future Endeavors!</h2>
+            
+            <p class="closing-message">
+                As you embark on this exciting journey, we want you to know that we believe in your potential. Whether you join us or choose a different path, carry forward the confidence, determination, and passion that brought you here today. The world is waiting for leaders like you!
+            </p>
+
+            <div class="closing-highlight">
+                "This is not just an admission – it's the beginning of a beautiful relationship. Even after the decision is made, we want to stay connected with you. Your success is our pride, and we're committed to supporting your growth every step of the way."
+            </div>
+
+            <div class="college-details">
+                <div class="college-name">Shivalik Institute of Management Education and Research</div>
+                <div class="college-info">
+                    <p><strong>SIMER PGDM</strong></p>
+                    <p>📍 Durg, Chhattisgarh</p>
+                    <p>📞 9826107555</p>
+                    <p>🌐 www.simer.in</p>
+                    <p style="margin-top: 1rem; font-style: italic;">Empowering Tomorrow's Leaders Today</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 SIMER PGDM | #StartYourSuccessStory</p>
+        <p>&copy; 2026 SIMER PGDM | Shivalik Institute of Management Education and Research | Empowering Tomorrow's Leaders</p>
     </footer>
 
     <script>
@@ -956,7 +1078,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.collapsible-item, .motivation-box, .contact-content, .hero-content').forEach(element => {
+        document.querySelectorAll('.collapsible-item, .motivation-box, .closing-content, .hero-content, .welcome-content').forEach(element => {
             observer.observe(element);
         });
     </script>
