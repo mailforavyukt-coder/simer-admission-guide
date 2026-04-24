@@ -342,29 +342,37 @@
         }
 
         /* TIMELINE FLOW */
-        .timeline {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0;
+        .timeline-wrapper {
+            background-color: hsl(240, 10%, 90%);
+            padding: 1.5rem;
+            border-radius: 8px;
             margin-top: 1.5rem;
         }
 
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0;
+        }
+
         .timeline-item {
-            background: var(--card);
+            background: white;
             padding: 1rem 1.2rem;
-            border-radius: 0;
-            border: 2px solid var(--orange);
+            border-radius: 8px;
+            border: none;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
-            flex: 0 0 calc(12.5% - 2px);
+            flex: 0 0 calc(12.5% - 1rem);
             min-width: 90px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .timeline-item::after {
             content: '→';
             position: absolute;
-            right: -24px;
+            right: -22px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.3rem;
@@ -565,11 +573,11 @@
         /* MOBILE RESPONSIVE */
         @media (max-width: 1200px) {
             .timeline {
-                gap: 0;
+                gap: 1rem;
             }
 
             .timeline-item {
-                flex: 0 0 calc(25% - 2px);
+                flex: 0 0 calc(25% - 1rem);
             }
 
             .timeline-item::after {
@@ -637,24 +645,28 @@
                 font-size: 3rem;
             }
 
+            .timeline-wrapper {
+                padding: 1rem;
+            }
+
             .timeline {
                 flex-direction: column;
-                gap: 30px;
-                margin-top: 1.5rem;
+                gap: 1rem;
+                margin: 0;
             }
 
             .timeline-item {
                 flex: 0 0 100%;
                 width: 100%;
                 position: relative;
-                margin-bottom: 15px;
+                margin-bottom: 0;
             }
 
             .timeline-item::after {
                 content: '↓';
                 position: absolute;
                 right: auto;
-                bottom: -35px;
+                bottom: -30px;
                 left: 50%;
                 transform: translateX(-50%);
                 font-size: 1.3rem;
@@ -738,6 +750,10 @@
                 font-size: 2rem;
             }
 
+            .timeline-wrapper {
+                padding: 0.8rem;
+            }
+
             .timeline-item {
                 padding: 0.8rem 1rem;
             }
@@ -811,6 +827,7 @@
                 <p>Take the first step towards your future. Join our community of future leaders and shape your career with excellence.</p>
                 <a href="#faq" class="welcome-button">Start Your Journey →</a>
             </div>
+            
         </div>
     </section>
 
@@ -832,53 +849,55 @@
             <div class="underline"></div>
         </div>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot">📝</div>
-                <div class="timeline-title">Fill Form</div>
-                <div class="timeline-description">Complete form</div>
-            </div>
+        <div class="timeline-wrapper">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">📝</div>
+                    <div class="timeline-title">Fill Form</div>
+                    <div class="timeline-description">Complete form</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">💳</div>
-                <div class="timeline-title">Pay Fee</div>
-                <div class="timeline-description">₹900</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">💳</div>
+                    <div class="timeline-title">Pay Fee</div>
+                    <div class="timeline-description">₹900</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">📄</div>
-                <div class="timeline-title">Documents</div>
-                <div class="timeline-description">Submit certs</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">📄</div>
+                    <div class="timeline-title">Documents</div>
+                    <div class="timeline-description">Submit certs</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">📅</div>
-                <div class="timeline-title">Get Date</div>
-                <div class="timeline-description">Test date</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">📅</div>
+                    <div class="timeline-title">Get Date</div>
+                    <div class="timeline-description">Test date</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">✍️</div>
-                <div class="timeline-title">Written Test</div>
-                <div class="timeline-description">20 min</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">✍️</div>
+                    <div class="timeline-title">Written Test</div>
+                    <div class="timeline-description">20 min</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">👥</div>
-                <div class="timeline-title">Interview</div>
-                <div class="timeline-description">Personal</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">👥</div>
+                    <div class="timeline-title">Interview</div>
+                    <div class="timeline-description">Personal</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">📢</div>
-                <div class="timeline-title">Result</div>
-                <div class="timeline-description">Same day</div>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">📢</div>
+                    <div class="timeline-title">Result</div>
+                    <div class="timeline-description">Same day</div>
+                </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot">✅</div>
-                <div class="timeline-title">Confirm</div>
-                <div class="timeline-description">₹10,000</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">✅</div>
+                    <div class="timeline-title">Confirm</div>
+                    <div class="timeline-description">₹10,000</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1098,7 +1117,7 @@
             </p>
 
             <div class="closing-highlight">
-                "Your success is our pride. We're here to support your growth, today and always."
+                #StartYourSuccessStory
             </div>
 
             <div class="college-details">
