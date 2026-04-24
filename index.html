@@ -168,13 +168,26 @@
 
         /* WELCOME SECTION WITH BACKGROUND IMAGE */
         .welcome-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        linear-gradient(135deg, hsl(240, 33%, 35%) 0%, hsl(240, 33%, 25%) 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 2.5rem 2rem;
             min-height: 350px;
             display: flex;
             align-items: center;
+            position: relative;
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            z-index: 1;
         }
 
         .welcome-container {
@@ -185,6 +198,8 @@
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .welcome-content h2 {
@@ -315,6 +330,7 @@
             font-weight: bold;
             color: var(--orange);
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         .collapsible-item.active .collapsible-toggle {
@@ -347,13 +363,15 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin-top: 1.5rem;
+            overflow-x: auto;
         }
 
         .timeline {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
             margin: 0;
+            min-width: min-content;
+            padding: 0.5rem 0;
         }
 
         .timeline-item {
@@ -364,15 +382,14 @@
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
-            flex: 0 0 calc(12.5% - 1rem);
-            min-width: 90px;
+            flex: 0 0 120px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .timeline-item::after {
             content: '→';
             position: absolute;
-            right: -22px;
+            right: -32px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.3rem;
@@ -577,11 +594,11 @@
             }
 
             .timeline-item {
-                flex: 0 0 calc(25% - 1rem);
+                flex: 0 0 100px;
             }
 
             .timeline-item::after {
-                right: -18px;
+                right: -24px;
                 font-size: 1rem;
             }
 
@@ -647,29 +664,29 @@
 
             .timeline-wrapper {
                 padding: 1rem;
+                overflow-x: auto;
             }
 
             .timeline {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 1rem;
+                min-width: min-content;
                 margin: 0;
             }
 
             .timeline-item {
-                flex: 0 0 100%;
-                width: 100%;
+                flex: 0 0 100px;
                 position: relative;
                 margin-bottom: 0;
             }
 
             .timeline-item::after {
-                content: '↓';
+                content: '→';
                 position: absolute;
-                right: auto;
-                bottom: -30px;
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 1.3rem;
+                right: -24px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1rem;
                 color: var(--orange);
             }
 
@@ -752,10 +769,22 @@
 
             .timeline-wrapper {
                 padding: 0.8rem;
+                overflow-x: auto;
+            }
+
+            .timeline {
+                gap: 1rem;
+                min-width: min-content;
             }
 
             .timeline-item {
+                flex: 0 0 90px;
                 padding: 0.8rem 1rem;
+            }
+
+            .timeline-item::after {
+                right: -18px;
+                font-size: 0.9rem;
             }
 
             .timeline-dot {
@@ -820,14 +849,16 @@
     </header>
 
     <!-- WELCOME SECTION -->
-    <section class="welcome-section" id="admission">
+    <section class="welcome-section" id="admission" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop');">
         <div class="welcome-container">
             <div class="welcome-content reveal">
                 <h2>Ready to Join <span style="color: hsl(40, 33%, 97%);">SIMER?</span></h2>
                 <p>Take the first step towards your future. Join our community of future leaders and shape your career with excellence.</p>
                 <a href="#faq" class="welcome-button">Start Your Journey →</a>
             </div>
-            
+            <div class="welcome-image">
+                🎓
+            </div>
         </div>
     </section>
 
