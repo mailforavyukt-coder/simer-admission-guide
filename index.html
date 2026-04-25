@@ -60,6 +60,15 @@
             }
         }
 
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
         .reveal {
             animation: fadeInUp 0.6s ease-out forwards;
         }
@@ -195,6 +204,7 @@
             min-height: 380px;
             display: flex;
             align-items: center;
+            position: relative;
         }
 
         .welcome-container {
@@ -214,6 +224,10 @@
             line-height: 1.3;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             white-space: nowrap;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
         }
 
         .welcome-content p {
@@ -225,30 +239,45 @@
             max-width: 400px;
         }
 
-        .welcome-button {
-            display: inline-block;
-            background: var(--orange);
-            color: white;
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 2px solid var(--orange);
-            box-shadow: 0 4px 15px rgba(222, 113, 53, 0.3);
-        }
-
-        .welcome-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(222, 113, 53, 0.5);
-            background: hsl(14, 85%, 45%);
-        }
-
         .welcome-image {
             text-align: center;
             font-size: 3.5rem;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        /* FLASH MESSAGE */
+        .flash-message {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: red;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            border-left: 5px solid white;
+            max-width: 280px;
+            animation: pulse 2s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        .flash-message-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .flash-message-subtitle {
+            font-size: 0.95rem;
+            font-weight: 600;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .flash-divider {
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0.8rem 0;
         }
 
         /* HERO SECTION */
@@ -630,6 +659,11 @@
             font-weight: 500;
         }
 
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
         /* MOBILE RESPONSIVE */
         @media (max-width: 1200px) {
             .welcome-container {
@@ -644,6 +678,15 @@
             .simer-logo {
                 width: 80px;
                 height: 80px;
+            }
+
+            .flash-message {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                margin: 1rem 2rem;
+                max-width: 100%;
             }
         }
 
@@ -670,7 +713,7 @@
             .logo-section {
                 justify-content: flex-start;
     width: auto;
-    padding-left: 10px;
+    padding-left: 18px;
             }
 
             .simer-logo {
@@ -706,11 +749,6 @@
                 margin-bottom: 0.8rem;
             }
 
-            .welcome-button {
-                padding: 0.75rem 1.8rem;
-                font-size: 0.85rem;
-            }
-
             .welcome-image {
                 font-size: 2.5rem;
             }
@@ -721,6 +759,16 @@
             }
                  .welcome-content {
         padding-bottom: 20px;
+            }
+
+            .flash-message {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                margin: 1rem;
+                max-width: 100%;
+                white-space: normal;
             }
 
             .timeline-grid {
@@ -751,6 +799,10 @@
 
             nav a {
                 font-size: 0.85rem;
+            }
+
+            footer a {
+                color: white;
             }
         }
 
@@ -806,13 +858,28 @@
                 max-width: 100%;
             }
 
-            .welcome-button {
-                padding: 0.7rem 1.6rem;
-                font-size: 0.8rem;
-            }
-
             .welcome-image {
                 font-size: 2rem;
+            }
+
+            .flash-message {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
+                margin: 1rem 0.8rem;
+                max-width: 100%;
+                padding: 1rem 1.5rem;
+                white-space: normal;
+            }
+
+            .flash-message-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .flash-message-subtitle {
+                font-size: 0.85rem;
             }
 
             .timeline-title {
@@ -867,6 +934,10 @@
             nav a {
                 font-size: 0.75rem;
             }
+
+            footer a {
+                color: white;
+            }
         }
     </style>
 </head>
@@ -892,11 +963,15 @@
 
     <!-- WELCOME SECTION -->
     <section class="welcome-section" id="admission">
+        <!-- FLASH MESSAGE -->
+        <div class="flash-message">
+            <div class="flash-message-title">⚡ Last Few Seats Left</div>
+        </div>
+
         <div class="welcome-container">
             <div class="welcome-content reveal">
                 <h2>Ready to Join <span style="color: hsl(40, 33%, 97%);">SIMER?</span></h2>
-                <p>Start your journey today.</p>
-                <a href="#faq" class="welcome-button">Begin →</a>
+               
             </div>
         </div>
     </section>
@@ -925,9 +1000,9 @@
                 <div class="timeline-number">1</div>
                 <h3 class="timeline-title">Application & Payment</h3>
                 <ul class="timeline-points">
-                    <li>Fill admission form</li>
+                    <li>Fill Application form</li>
                     <li>Pay registration fee ₹900</li>
-                    <li>Submit documents (10th, 12th, graduation certificates)</li>
+                    <li>Submit documents (10th, 12th, graduation certificates, CAT/MAT/ATMA)</li>
                 </ul>
                 <div class="timeline-connector"></div>
             </div>
@@ -943,12 +1018,12 @@
                 <div class="timeline-connector"></div>
             </div>
 
-            <!-- Box 3: Results & Confirmation -->
+            <!-- Box 3: Result & Confirmation -->
             <div class="timeline-box reveal">
                 <div class="timeline-number">3</div>
-                <h3 class="timeline-title">Results & Seat Confirmation</h3>
+                <h3 class="timeline-title">Result & Seat Confirmation</h3>
                 <ul class="timeline-points">
-                    <li>Get results same day/next day</li>
+                    <li>Get result same day/next day</li>
                     <li>Receive admission offer</li>
                     <li>Pay seat confirmation fee ₹10,000</li>
                 </ul>
@@ -1155,7 +1230,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Call us at 9826107555 or visit www.simer.in. Our admissions team is ready to guide and support you!</p>
+                    <p>Call us at <a href="tel:9826107555">9826107555</a> or visit www.simer.in. Our admissions team is ready to guide and support you!</p>
                 </div>
             </div>
         </div>
@@ -1180,7 +1255,7 @@
     <!-- FOOTER -->
     <footer>
         <p>Shivalik Institute of Management Education and Research</p>
-<p> Durg, Chhattisgarh | 📞 9826107555, www.simer.in</p>
+<p>Durg, Chhattisgarh | 📞 <a href="tel:9826107555">9826107555</a>, www.simer.in</p>
     </footer>
 
     <script>
