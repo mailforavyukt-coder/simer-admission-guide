@@ -710,7 +710,7 @@
             .logo-section {
                 justify-content: flex-start;
     width: auto;
-    padding-left: 10px;
+    padding-left: 14px;
             }
 
             .simer-logo {
@@ -745,6 +745,7 @@
                 font-size: 1.3rem;
                 white-space: normal;
                 margin-bottom: 0.4rem;
+                margin-top: 80px !important;
                 padding: 0.8rem 1rem;
                 background: rgba(0, 0, 0, 0.25);
                 border-radius: 8px;
@@ -765,15 +766,32 @@
                 align-items: end;
             }
 
-            .flash-message {
-                position: absolute;
-                top: 0.5rem;
-                left: 50%;
-                transform: translateX(-50%);
-                margin: 0;
-                max-width: calc(100% - 1rem);
-                padding: 1rem 1.5rem;
-                z-index: 15;
+           .flash-message {
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    color: #ff0000;
+    background: transparent;
+    
+    padding: 0 !important;
+    margin: 0;
+    
+    border: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    
+    box-shadow: none !important;
+    outline: none !important;
+    
+    width: auto;
+    max-width: 100%;
+    
+    text-align: center;
+    z-index: 15;
+    animation: pulse 2s ease-in-out infinite;
+
             }
 
             .flash-message-title {
