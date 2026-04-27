@@ -310,7 +310,7 @@
         /* TIMELINE SECTION - 3 BOXES */
         .timeline-section {
             background-color: var(--background);
-            padding: 1.5rem 2rem;
+            padding: 1.5rem 2rem 0;
         }
 
         .timeline-header {
@@ -420,12 +420,21 @@
             }
         }
 
-        /* ONLINE OPTION INFO BOX */
+        /* ONLINE OPTION BOX */
+        .online-option-section {
+            background-color: var(--background);
+            padding: 1.5rem 2rem 2rem;
+        }
+
         .online-option-box {
             max-width: 1400px;
-            margin: 2rem auto 0;
-            padding: 0 2rem;
+            margin: 0 auto;
+            background: linear-gradient(135deg, hsl(150, 53%, 95%) 0%, hsl(150, 30%, 92%) 100%);
+            border: 2px solid var(--leaf);
+            border-radius: 12px;
+            padding: 1.5rem;
             opacity: 0;
+            transition: all 0.3s ease;
         }
 
         .online-option-box.reveal {
@@ -433,33 +442,54 @@
             animation-delay: 0.4s;
         }
 
-        .online-option-content {
-            background: linear-gradient(135deg, hsl(150, 53%, 92%) 0%, hsl(150, 45%, 88%) 100%);
-            border-left: 5px solid var(--leaf);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(20, 126, 83, 0.1);
-            transition: all 0.3s ease;
+        .online-option-box:hover {
+            box-shadow: 0 8px 24px rgba(20, 126, 83, 0.15);
+            transform: translateY(-3px);
         }
 
-        .online-option-content:hover {
-            box-shadow: 0 6px 16px rgba(20, 126, 83, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .online-option-content p {
-            color: var(--ink);
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin: 0;
-            line-height: 1.6;
+        .online-option-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
         .online-option-icon {
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-            display: inline-block;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .online-option-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--leaf);
+            letter-spacing: -0.2px;
+        }
+
+        .online-option-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .online-option-points li {
+            color: var(--ink);
+            font-size: 0.9rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .online-option-points li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--leaf);
+            font-weight: bold;
+            font-size: 1rem;
         }
 
         /* COLLAPSIBLE SECTION */
@@ -854,12 +884,30 @@
                 gap: 1.5rem;
             }
 
-            .online-option-content {
+            .online-option-box {
                 padding: 1rem;
             }
 
-            .online-option-content p {
-                font-size: 0.9rem;
+            .online-option-header {
+                gap: 0.8rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .online-option-icon {
+                font-size: 1.5rem;
+            }
+
+            .online-option-title {
+                font-size: 1rem;
+            }
+
+            .online-option-points {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .online-option-points li {
+                font-size: 0.8rem;
             }
 
             .questions-grid {
@@ -993,16 +1041,30 @@
             }
 
             .online-option-box {
-                padding: 0 1rem;
-                margin: 1.5rem auto 0;
+                padding: 0.8rem;
             }
 
-            .online-option-content {
-                padding: 1rem;
+            .online-option-header {
+                gap: 0.6rem;
+                margin-bottom: 0.6rem;
             }
 
-            .online-option-content p {
+            .online-option-icon {
+                font-size: 1.3rem;
+            }
+
+            .online-option-title {
                 font-size: 0.85rem;
+            }
+
+            .online-option-points {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+
+            .online-option-points li {
+                font-size: 0.75rem;
+                padding-left: 1.2rem;
             }
 
             .questions-grid {
@@ -1066,13 +1128,9 @@
 
     <!-- WELCOME SECTION -->
     <section class="welcome-section" id="admission">
-       
-      
-
         <div class="welcome-container">
             <div class="welcome-content reveal">
                 <h2>Ready to Join <span style="color: hsl(40, 33%, 97%);">SIMER?</span></h2>
-                
             </div>
         </div>
     </section>
@@ -1103,12 +1161,7 @@
                 <ul class="timeline-points">
                     <li>Fill Application form</li>
                     <li>Pay registration fee ₹900</li>
-                    <li>
-    
-    Submit documents (10th, 12th, Graduation Certificates<br>
-    <span style="white-space: nowrap;"> CAT / MAT / ATMA Score card, and Adhar</span>)
-
-</li>
+                    <li>Submit documents (10th, 12th, Graduation Certificates, CAT / MAT / ATMA Score card, and Aadhar)</li>
                 </ul>
                 <div class="timeline-connector"></div>
             </div>
@@ -1135,15 +1188,21 @@
                 </ul>
             </div>
         </div>
+    </section>
 
-        <!-- ONLINE OPTION INFO BOX -->
+    <!-- ONLINE OPTION SECTION -->
+    <section class="online-option-section">
         <div class="online-option-box reveal">
-            <div class="online-option-content">
-                <p>
-                    <span class="online-option-icon">💻</span>
-                    <strong>Prefer Online?</strong> You can complete the entire admission process online! Fill the form, submit marksheets digitally, appear for the written communication test online, and have your interview via WhatsApp video call. Same process, same standards, complete flexibility.
-                </p>
+            <div class="online-option-header">
+                <div class="online-option-icon">💻</div>
+                <div class="online-option-title">Or Go Online!</div>
             </div>
+            <ul class="online-option-points">
+                <li>Fill form + upload marksheets</li>
+                <li>Written test (20 mins) online</li>
+                <li>Interview via WhatsApp video call</li>
+                <li>Same process, same standards</li>
+            </ul>
         </div>
     </section>
 
@@ -1256,7 +1315,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Complete admission takes 1-1.5 hours: 20 minutes written test, 10-15 minutes interview. Same day or next day results! Whether you choose offline or online mode, the timeline remains the same.</p>
+                    <p>Complete admission takes 1-1.5 hours: 20 minutes written test, 10-15 minutes interview. Same day or next day results! For online mode, the process is equally quick with real-time tests and video interviews.</p>
                 </div>
             </div>
 
@@ -1266,8 +1325,8 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p><strong>For Offline:</strong> Bring original 10th and 12th certificates, graduation certificate, entrance exam score card, admission form, and valid ID proof.</p>
-                    <p><strong>For Online:</strong> Submit scanned copies via email or application portal (10th, 12th, graduation certificates, entrance exam score card, and ID proof).</p>
+                    <p><strong>Offline:</strong> Bring original 10th and 12th certificates, graduation certificate, entrance exam score card, admission form, and valid ID proof.</p>
+                    <p><strong>Online:</strong> Upload scanned copies of all documents. Clear photos of marksheets will suffice.</p>
                 </div>
             </div>
 
@@ -1277,7 +1336,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>You will get results same day evening or next day via call or SMS. We value your time! This applies to both offline and online modes.</p>
+                    <p>You will get results same day evening or next day via call or SMS. We value your time!</p>
                 </div>
             </div>
 
@@ -1323,12 +1382,22 @@
 
             <div class="collapsible-item">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                    <span>Can I choose between online and offline?</span>
+                    <span class="collapsible-toggle">▼</span>
+                </button>
+                <div class="collapsible-content">
+                    <p>Absolutely! Choose what works best for you. Both modes have the same admission standards and equal value. Your success matters more than location!</p>
+                </div>
+            </div>
+
+            <div class="collapsible-item">
+                <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                     <span>What should I wear?</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p><strong>For Offline:</strong> Dress formally: men wear shirt, trousers, and tie; women wear saree or professional dress. Be well-groomed – first impressions matter!</p>
-                    <p><strong>For Online:</strong> Dress professionally from the front (shirt/formal top). Keep the background clean and neutral. Ensure good lighting and a clear camera view.</p>
+                    <p><strong>Offline:</strong> Dress formally - men wear shirt, trousers, and tie; women wear saree or professional dress. Be well-groomed!</p>
+                    <p><strong>Online:</strong> Wear professional top, plain background. First impression matters even on screen!</p>
                 </div>
             </div>
 
@@ -1344,21 +1413,11 @@
 
             <div class="collapsible-item">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
-                    <span>Can I choose between online and offline?</span>
-                    <span class="collapsible-toggle">▼</span>
-                </button>
-                <div class="collapsible-content">
-                    <p>Yes! During application, you can select your preferred mode - offline (visit campus) or online (complete everything remotely via WhatsApp video call). Choose what works best for you!</p>
-                </div>
-            </div>
-
-            <div class="collapsible-item">
-                <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                     <span>Need more help?</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Call us at <a href="tel:9826107555">9826107555</a> or visit www.simer.in. Our admissions team is ready to guide and support you! You can also WhatsApp us for queries about the online admission process.</p>
+                    <p>Call us at <a href="tel:9826107555">9826107555</a> or visit www.simer.in. Our admissions team is ready to guide and support you! For online queries, WhatsApp us for quick assistance.</p>
                 </div>
             </div>
         </div>
@@ -1383,7 +1442,7 @@
     <!-- FOOTER -->
     <footer>
         <p>Shivalik Institute of Management Education and Research</p>
-<p> Durg, Chhattisgarh | 📞 <a href="tel:9826107555">9826107555</a>, www.simer.in</p>
+<p>Durg, Chhattisgarh | 📞 <a href="tel:9826107555">9826107555</a>, www.simer.in</p>
     </footer>
 
     <script>
