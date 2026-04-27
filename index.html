@@ -569,6 +569,7 @@
             align-items: center;
             transition: all 0.3s ease;
             border-left: 4px solid var(--orange);
+            text-align: left;
         }
 
         .collapsible-btn:hover {
@@ -581,6 +582,7 @@
             font-weight: bold;
             color: var(--orange);
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         .collapsible-item.active .collapsible-toggle {
@@ -605,6 +607,7 @@
             line-height: 1.6;
             font-size: 0.9rem;
             margin-bottom: 0.8rem;
+            text-align: left;
         }
 
         /* ONLINE CARE BOX - Plain background */
@@ -623,12 +626,14 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-align: left;
         }
 
         .online-care-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: left;
         }
 
         .online-care-list li {
@@ -638,6 +643,7 @@
             padding-left: 1.5rem;
             position: relative;
             line-height: 1.5;
+            text-align: left;
         }
 
         .online-care-list li:before {
@@ -960,6 +966,13 @@
             .collapsible-btn {
                 padding: 1rem;
                 font-size: 0.95rem;
+                text-align: left;
+            }
+
+            .collapsible-btn span:first-child {
+                text-align: left;
+                display: block;
+                flex: 1;
             }
 
             .hero {
@@ -972,6 +985,22 @@
 
             nav a {
                 font-size: 0.85rem;
+            }
+
+            .collapsible-content p {
+                text-align: left;
+            }
+
+            .online-care-title {
+                text-align: left;
+            }
+
+            .online-care-list {
+                text-align: left;
+            }
+
+            .online-care-list li {
+                text-align: left;
             }
         }
 
@@ -1094,6 +1123,11 @@
             .collapsible-btn {
                 padding: 0.9rem;
                 font-size: 0.9rem;
+                text-align: left;
+            }
+
+            .collapsible-btn span:first-child {
+                text-align: left;
             }
 
             .closing-title {
@@ -1114,6 +1148,22 @@
 
             nav a {
                 font-size: 0.75rem;
+            }
+
+            .collapsible-content p {
+                text-align: left;
+            }
+
+            .online-care-title {
+                text-align: left;
+            }
+
+            .online-care-list {
+                text-align: left;
+            }
+
+            .online-care-list li {
+                text-align: left;
             }
         }
     </style>
