@@ -420,6 +420,48 @@
             }
         }
 
+        /* ONLINE OPTION INFO BOX */
+        .online-option-box {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+            opacity: 0;
+        }
+
+        .online-option-box.reveal {
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        .online-option-content {
+            background: linear-gradient(135deg, hsl(150, 53%, 92%) 0%, hsl(150, 45%, 88%) 100%);
+            border-left: 5px solid var(--leaf);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(20, 126, 83, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .online-option-content:hover {
+            box-shadow: 0 6px 16px rgba(20, 126, 83, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .online-option-content p {
+            color: var(--ink);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .online-option-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+        }
+
         /* COLLAPSIBLE SECTION */
         .collapsible-section {
             background-color: var(--background);
@@ -812,6 +854,14 @@
                 gap: 1.5rem;
             }
 
+            .online-option-content {
+                padding: 1rem;
+            }
+
+            .online-option-content p {
+                font-size: 0.9rem;
+            }
+
             .questions-grid {
                 grid-template-columns: 1fr;
             }
@@ -942,6 +992,19 @@
                 margin-bottom: 0.8rem;
             }
 
+            .online-option-box {
+                padding: 0 1rem;
+                margin: 1.5rem auto 0;
+            }
+
+            .online-option-content {
+                padding: 1rem;
+            }
+
+            .online-option-content p {
+                font-size: 0.85rem;
+            }
+
             .questions-grid {
                 grid-template-columns: 1fr;
             }
@@ -1042,7 +1105,7 @@
                     <li>Pay registration fee ₹900</li>
                     <li>
     
-    Submit documents (10th, 12th,Graduation Certificates<br>
+    Submit documents (10th, 12th, Graduation Certificates<br>
     <span style="white-space: nowrap;"> CAT / MAT / ATMA Score card, and Adhar</span>)
 
 </li>
@@ -1070,6 +1133,16 @@
                     <li>Receive admission offer</li>
                     <li>Pay seat confirmation fee ₹10,000</li>
                 </ul>
+            </div>
+        </div>
+
+        <!-- ONLINE OPTION INFO BOX -->
+        <div class="online-option-box reveal">
+            <div class="online-option-content">
+                <p>
+                    <span class="online-option-icon">💻</span>
+                    <strong>Prefer Online?</strong> You can complete the entire admission process online! Fill the form, submit marksheets digitally, appear for the written communication test online, and have your interview via WhatsApp video call. Same process, same standards, complete flexibility.
+                </p>
             </div>
         </div>
     </section>
@@ -1183,7 +1256,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Complete admission takes 1-1.5 hours: 20 minutes written test, 10-15 minutes interview. Same day or next day results!</p>
+                    <p>Complete admission takes 1-1.5 hours: 20 minutes written test, 10-15 minutes interview. Same day or next day results! Whether you choose offline or online mode, the timeline remains the same.</p>
                 </div>
             </div>
 
@@ -1193,7 +1266,8 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Bring: 10th and 12th certificates, graduation certificate, entrance exam score card, admission form, and valid ID proof.</p>
+                    <p><strong>For Offline:</strong> Bring original 10th and 12th certificates, graduation certificate, entrance exam score card, admission form, and valid ID proof.</p>
+                    <p><strong>For Online:</strong> Submit scanned copies via email or application portal (10th, 12th, graduation certificates, entrance exam score card, and ID proof).</p>
                 </div>
             </div>
 
@@ -1203,7 +1277,7 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>You will get results same day evening or next day via call or SMS. We value your time!</p>
+                    <p>You will get results same day evening or next day via call or SMS. We value your time! This applies to both offline and online modes.</p>
                 </div>
             </div>
 
@@ -1253,7 +1327,8 @@
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Dress formally: men wear shirt, trousers, and tie; women wear saree or professional dress. Be well-groomed – first impressions matter!</p>
+                    <p><strong>For Offline:</strong> Dress formally: men wear shirt, trousers, and tie; women wear saree or professional dress. Be well-groomed – first impressions matter!</p>
+                    <p><strong>For Online:</strong> Dress professionally from the front (shirt/formal top). Keep the background clean and neutral. Ensure good lighting and a clear camera view.</p>
                 </div>
             </div>
 
@@ -1269,11 +1344,21 @@
 
             <div class="collapsible-item">
                 <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                    <span>Can I choose between online and offline?</span>
+                    <span class="collapsible-toggle">▼</span>
+                </button>
+                <div class="collapsible-content">
+                    <p>Yes! During application, you can select your preferred mode - offline (visit campus) or online (complete everything remotely via WhatsApp video call). Choose what works best for you!</p>
+                </div>
+            </div>
+
+            <div class="collapsible-item">
+                <button class="collapsible-btn" onclick="toggleCollapsible(this)">
                     <span>Need more help?</span>
                     <span class="collapsible-toggle">▼</span>
                 </button>
                 <div class="collapsible-content">
-                    <p>Call us at <a href="tel:9826107555">9826107555</a> or visit www.simer.in. Our admissions team is ready to guide and support you!</p>
+                    <p>Call us at <a href="tel:9826107555">9826107555</a> or visit www.simer.in. Our admissions team is ready to guide and support you! You can also WhatsApp us for queries about the online admission process.</p>
                 </div>
             </div>
         </div>
@@ -1343,7 +1428,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.timeline-box, .collapsible-item, .motivation-box, .closing-content, .hero-content, .welcome-content').forEach(element => {
+        document.querySelectorAll('.timeline-box, .collapsible-item, .motivation-box, .closing-content, .hero-content, .welcome-content, .online-option-box').forEach(element => {
             observer.observe(element);
         });
     </script>
